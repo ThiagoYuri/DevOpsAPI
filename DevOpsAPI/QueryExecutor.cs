@@ -46,9 +46,9 @@ namespace DevOpsAPI
                 // NOTE: Even if other columns are specified, only the ID & URL are available in the WorkItemReference
                 Query = "Select [Id] " +
                         "From WorkItems " +
-                        "Where [Work Item Type] = 'Bug' " +
+                        "Where [Work Item Type] = 'Task' " +
                         "And [System.TeamProject] = '" + project + "' " +
-                        "And [System.State] <> 'Closed' " +
+                        "And [System.State] == 'Closed' " +
                         "Order By [State] Asc, [Changed Date] Desc",
             };
 
